@@ -25,8 +25,9 @@ const isMadeOfPatterns = (str: string) => {
       }
 
       // check if all are equal
-      if (chunks.every((ch: string) => ch === chunks[0]))
+      if (chunks.every((ch: string) => ch === chunks[0])) {
         allPatternsEqual = true;
+      }
     }
   }
   return allPatternsEqual;
