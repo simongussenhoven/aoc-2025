@@ -35,23 +35,19 @@ const isMadeOfPatterns = (str: string) => {
 
 // iterate over each range
 ids.forEach((row) => {
-  const start = row[0];
-  const end = row[1];
-
-  for (let i = Number(start); i <= Number(end); i++) {
+  for (let i = Number(row[0]); i <= Number(row[1]); i++) {
     const string = String(i);
     const first = string.slice(0, string.length / 2);
     const second = string.slice(string.length / 2, string.length);
-
+    // part 1
     if (first === second) {
       countPart1 = countPart1 + Number(string);
     }
-  }
 
-  // check each number for patterns
-  for (let i = Number(start); i <= Number(end); i++) {
-    const string = String(i);
-    if (isMadeOfPatterns(string)) countPart2 = countPart2 + Number(string);
+    // part 2
+    if (isMadeOfPatterns(string)) {
+      countPart2 = countPart2 + Number(string);
+    }
   }
 });
 
