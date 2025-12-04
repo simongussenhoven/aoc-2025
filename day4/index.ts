@@ -1,5 +1,5 @@
 const fs = require("fs");
-const data: any = fs.readFileSync("./day4/example.txt", "utf8");
+const data: any = fs.readFileSync("./day4/data.txt", "utf8");
 let grid = data.split("\n").map((row: string) => row.split(""));
 
 let accessibleRolls = 0;
