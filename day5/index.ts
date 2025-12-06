@@ -1,5 +1,5 @@
 const fs = require("fs");
-const data: any = fs.readFileSync("./day5/data.txt", "utf8");
+const data: any = fs.readFileSync("./day5/example.txt", "utf8");
 
 let ranges = data
   .split("\n\n")[0]
